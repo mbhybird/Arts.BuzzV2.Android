@@ -1,0 +1,173 @@
+<com.buzz.layout.BidirSlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainSlidingLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textStyle="normal"-->
+    <!--android:textSize="20dp"-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:id="@+id/txtView"/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/imageView"-->
+    <!--android:layout_below="@+id/txtView"-->
+    <!--android:scaleType="fitXY"/>-->
+
+    <!--<Space-->
+    <!--android:id="@+id/spaceTop"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_below="@+id/imageView"/>-->
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/dotopen"-->
+    <!--android:layout_below="@id/spaceTop"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:id="@+id/btnOpen"/>-->
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/infodot"-->
+    <!--android:layout_below="@id/spaceTop"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:id="@+id/btnInfo"/>-->
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/belldot"-->
+    <!--android:layout_below="@id/btnOpen"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:id="@+id/btnPlay"/>-->
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/ic_launcher"-->
+    <!--android:layout_below="@id/btnInfo"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:id="@+id/btnStop"/>-->
+
+    <!--<com.buzz.shape.CircleImageView-->
+    <!--android:layout_width="160dp"-->
+    <!--android:layout_height="160dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:src="@drawable/buzz43"-->
+    <!--app:border_width="4dp"-->
+    <!--app:border_color="@color/blue"/>-->
+
+    <include layout="@layout/right_menu"></include>
+
+    <RelativeLayout
+        android:layout_width="270dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="#00ccff"
+        android:visibility="invisible">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <RelativeLayout
+            android:id="@+id/main_activity_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/padding"
+            android:visibility="gone">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_activity_board_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/re_padding_5dp">
+
+            <ImageView
+                android:id="@+id/main_activity_img_icon_board"
+                android:layout_width="@dimen/img_board_width"
+                android:layout_height="@dimen/img_board_height"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_board"
+                android:scaleType="fitXY"
+                android:layout_margin="@dimen/padding_10dp"/>
+
+            <com.buzz.fonts.FuturaTextView
+                android:id="@+id/main_activity_txt_ball_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding"
+                android:layout_marginBottom="@dimen/padding_13dp"
+                android:layout_marginLeft="@dimen/padding_13dp"
+                android:layout_toLeftOf="@+id/main_activity_img_icon_board"
+                android:text="0"
+                android:textColor="#505050"
+                android:textSize="@dimen/tx_text_size_30dp" />
+
+            <Button
+                android:id="@+id/main_activity_btn_signal_back"
+                android:layout_width="@dimen/menu_height"
+                android:layout_height="@dimen/menu_height"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:layout_marginBottom="@dimen/padding_13dp"
+                android:layout_marginLeft="@dimen/padding_13dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/back"/>
+
+            <Button
+                android:id="@+id/main_activity_btn_menu"
+                android:layout_width="@dimen/menu_height"
+                android:layout_height="@dimen/menu_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:layout_marginLeft="@dimen/padding_13dp"
+                android:background="@drawable/menu" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_activity_ball_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/main_activity_board_layout"
+            android:layout_below="@+id/main_activity_menu_layout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/li_height_50dp"
+                android:text=""
+                android:gravity="center"
+                android:textSize="@dimen/btn_text_size_25dp"
+                android:textColor="@color/white_color"
+                android:id="@+id/main_activity_txt_ex_title" />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/main_activity_txt_ex_title"
+                android:id="@+id/main_activity_beacon_list_lv"
+                android:scrollbars="vertical"
+                android:divider="@color/bg_color"
+                android:dividerHeight="@dimen/tx_margin_2dp">
+            </ListView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</com.buzz.layout.BidirSlidingLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/padding_10dp"
+    android:paddingRight="@dimen/padding_10dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+   >
+       <com.buzz.fonts.FuturaTextView
+        android:id="@+id/FixedRechargeSum"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/set_tx_height_50dp"
+        android:text="buzz"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/set_tx_size_23dp"
+        android:textColor="@drawable/item_textcolor"
+        />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:id="@+id/defaultsum"
+		android:focusable="false"
+		android:clickable="false"
+		android:button="@drawable/sumlist_checkbox_bg"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>

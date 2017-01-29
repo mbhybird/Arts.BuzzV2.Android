@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/btn_margin_top_20dp"/>
+        <ImageView
+            android:id="@+id/guide_activity_btnClose"
+            android:layout_margin="@dimen/li_margin_top_5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/close_red"
+            android:scaleType="fitCenter"
+            android:layout_gravity="end" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/guide_activity_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dig_li_height_40dp"
+            android:layout_height="@dimen/dig_li_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="@dimen/dig_tx_size_15dp"
+            android:src="@drawable/dot" />
+
+        <ImageView
+            android:layout_width="@dimen/dig_li_height_40dp"
+            android:layout_height="@dimen/dig_li_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="@dimen/dig_tx_size_15dp"
+            android:src="@drawable/dot" />
+
+        <ImageView
+            android:layout_width="@dimen/dig_li_height_40dp"
+            android:layout_height="@dimen/dig_li_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="@dimen/dig_tx_size_15dp"
+            android:src="@drawable/dot" />
+
+        <ImageView
+            android:layout_width="@dimen/dig_li_height_40dp"
+            android:layout_height="@dimen/dig_li_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="@dimen/dig_tx_size_15dp"
+            android:src="@drawable/dot" />
+
+        <ImageView
+            android:layout_width="@dimen/dig_li_height_40dp"
+            android:layout_height="@dimen/dig_li_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="@dimen/dig_tx_size_15dp"
+            android:src="@drawable/dot" />
+
+        <ImageView
+            android:layout_width="@dimen/dig_li_height_40dp"
+            android:layout_height="@dimen/dig_li_height_40dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="@dimen/dig_tx_size_15dp"
+            android:src="@drawable/dot" />
+    </LinearLayout>
+
+    <com.buzz.fonts.FuturaButton
+        android:id="@+id/btn_startToExp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button"
+        android:text="@string/btn_title_start_to_exp"
+        android:textColor="@color/red_color"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        android:gravity="center" />
+</RelativeLayout>

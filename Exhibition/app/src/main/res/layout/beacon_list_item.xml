@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/re_padding_5dp">
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:id="@+id/beacon_list_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/odd_row_color">
+
+        <ImageView
+            android:id="@+id/beacon_list_item_imgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.buzz.fonts.FuturaTextView
+            android:id="@+id/beacon_list_item_tvTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingRight="@dimen/re_padding_5dp"
+            android:paddingTop="@dimen/re_padding_5dp"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/btn_text_size_25dp"
+            android:visibility="gone" />
+
+        <com.buzz.fonts.FuturaTextView
+            android:id="@+id/beacon_list_item_tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:alpha="0.5"
+            android:background="@color/black"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white_color"
+            android:padding="@dimen/re_padding_5dp"
+            android:textSize="@dimen/dig_tx_size_20dp" />
+    </FrameLayout>
+
+
+</RelativeLayout>

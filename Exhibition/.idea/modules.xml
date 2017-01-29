@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exhibition.iml" filepath="$PROJECT_DIR$/Exhibition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-beacon-library-2.3.3/android-beacon-library-2.3.3.iml" filepath="$PROJECT_DIR$/android-beacon-library-2.3.3/android-beacon-library-2.3.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estimote-sdk-preview/estimote-sdk-preview.iml" filepath="$PROJECT_DIR$/estimote-sdk-preview/estimote-sdk-preview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estimote-sdk-preview-javadoc/estimote-sdk-preview-javadoc.iml" filepath="$PROJECT_DIR$/estimote-sdk-preview-javadoc/estimote-sdk-preview-javadoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle-retrolambda-3.2.1/gradle-retrolambda-3.2.1.iml" filepath="$PROJECT_DIR$/gradle-retrolambda-3.2.1/gradle-retrolambda-3.2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackson-all-1.7.6/jackson-all-1.7.6.iml" filepath="$PROJECT_DIR$/jackson-all-1.7.6/jackson-all-1.7.6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libammsdk/libammsdk.iml" filepath="$PROJECT_DIR$/libammsdk/libammsdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nineoldandroids-2.4.0/nineoldandroids-2.4.0.iml" filepath="$PROJECT_DIR$/nineoldandroids-2.4.0/nineoldandroids-2.4.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okhttp-2.7.0/okhttp-2.7.0.iml" filepath="$PROJECT_DIR$/okhttp-2.7.0/okhttp-2.7.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okio-1.6.0/okio-1.6.0.iml" filepath="$PROJECT_DIR$/okio-1.6.0/okio-1.6.0.iml" />
+    </modules>
+  </component>
+</project>

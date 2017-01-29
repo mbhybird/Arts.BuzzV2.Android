@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dark">#FF222222</color>
+    <color name="light">#FFEEEEEE</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="level01">#FFFE9375</color>
+    <color name="level02">#FF1DD5C0</color>
+    <color name="level03">#FF00A8A7</color>
+    <color name="level04">#FF698686</color>
+	
+	
+	<color name="bg_color">#698686</color>
+    <color name="odd_row_color">#9FADAD</color>
+    <color name="even_row_color">#88C1C1</color>
+    <color name="gray_color">#C8C8C8</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="red_color">#FE9375</color>
+    <color name="about_color">#EBEEDD</color>
+    <color name="content_color">#282828</color>
+    <color name="footer_bg_color">#00A8A7</color>
+    <color name="number_color">#505050</color>
+    <color name="red">#FE9375</color>
+    <color name="green_01">#1DD5C0</color>
+    <color name="green_02">#00A8A7</color>
+    <color name="green_03">#698686</color>
+    <color name="bgred">#ee6e55</color>
+    <color name="bg_gray">#305b5b5b</color>
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#3087E9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+	
+</resources>

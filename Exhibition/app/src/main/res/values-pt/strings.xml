@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Arts.Buzz</string>
+    <string name="syncSystemConfig">同步系统设置</string>
+    <string name="downloadFile">资源文件下载</string>
+    <string name="download">下载</string>
+    <string name="cancel">取消</string>
+    <string name="doneList">下载历史：</string>
+    <string name="voicePlayLanguage">设置播放语言</string>
+    <string name="langSC">普通话</string>
+    <string name="langEN">English</string>
+    <string name="langCC">粤语</string>
+    <string name="langPT">Português</string>
+	
+	<string name="lb_title_appname">Arts.Buzz</string>
+    <string name="lb_email">Email</string>
+    <string name="lb_pwd">Senha</string>
+    <string name="lb_nname">Alcunha</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_sign">Signup</string>
+    <string name="btn_about">Sobre</string>
+    <string name="lb_setting">Configuração</string>
+    <string name="lb_events_list">Eventslist</string>
+    <string name="description">\"Arts.Buzz\" brings buzz to arts and cultural pieces, and it is one of the first Internet of Things application to the art and cultural world.</string>
+    <string name="lb_item">Item</string>
+    <string name="lang_en">English</string>
+    <string name="lang_cn">简体中文</string>
+    <string name="lang_tw">繁體中文</string>
+    <string name="lang_pt">Português</string>
+    <string name="main_about">\"Arts.Buzz\" brings buzz to arts and cultural pieces, and it is one of the first Internet of Things application to the art and cultural world. Macau Arts provides audio and visual information for the things of interested, and acts as your personal guide so you can get extra information while enjoying the arts.</string>
+
+    <string name="msg_check_wifi">WIFI não é conectado, verific por favor!</string>
+    <string name="msg_check_bt">Bluetooth não conectado, verifique!</string>
+    <string name="msg_check_server">Exceção ao servidor, seleção!</string>
+    <string name="msg_restart">Configurações de sistema atualizadas, reiniciar o aplicativo pode levar a efeito!</string>
+    <string name="msg_voice_lang_cc">A seleção atual é transmitida em cantonês</string>
+    <string name="msg_voice_lang_sc">A seleção atual é transmitida em Chinês</string>
+    <string name="msg_voice_lang_pt">A seleção atual é transmitida em Português</string>
+    <string name="msg_voice_lang_en">A seleção atual é inglês</string>
+    <string name="msg_quit_system">Em seguida, pressione a tecla return para sair</string>
+    <string name="msg_conn_headset">Por favor, conecte o fone de ouvido!</string>
+    <string name="msg_check_email">E-mail deve ser preenchido!</string>
+    <string name="msg_email_not_valid">O endereço de e - mail não é legal</string>
+    <string name="msg_check_pwd">Senha deve ser preenchida!</string>
+    <string name="msg_check_nickname">Nome deve ser preenchido!</string>
+    <string name="msg_login_failed">email ou senha está incorreta, digite novamente!</string>
+    <string name="msg_dlg_title_tips">Dicas</string>
+    <string name="msg_login_success">Okay</string>
+    <string name="msg_dlg_ok">Okay</string>
+    <string name="msg_dlg_title_ex_tag">Informações de exposição</string>
+    <string name="msg_dlg_cancel">Cancelar</string>
+    <string name="msg_sign_up_success">sucesso registrado.</string>
+
+    <string name="lbl_setting_auto_play">Tocar automaticamente</string>
+    <string name="lbl_system_display_lang">Exibição</string>
+    <string name="lbl_system_voice_lang">Áudio</string>
+    <string name="spinner_prompt">Por favor selecione</string>
+
+    <string name="msg_catalog_loading">Carregamento do catálogo...</string>
+    <string name="msg_app_initializing">Carregamento de dados...</string>
+    <string name="msg_add_to_favorite_success">Adicionar a favorito sucesso</string>
+    <string name="msg_file_downloading">Arquivo downloading...</string>
+    <string name="msg_delete_all_files">É claro que apagar todos os arquivos?</string>
+    <string name="msg_email_exists">e-mail tiver sido registrado, por favor mudar o outro.</string>
+    <string name="msg_catalog_finished">Catálogo terminado</string>
+    <string name="msg_delete_favorite">É claro que excluir o item?</string>
+
+    <string name="msg_logging_in">Logando</string>
+    <string name="msg_found_new_app_version">Eu encontrei uma versão mais recente, para atualizar?</string>
+    <string name="lbl_downloads">Downloads</string>
+    <string name="lbl_my_collections">Minhas coleções</string>
+    <string name="msg_file_not_exists">Arquivo é não existe</string>
+    <string name="btn_title_start_to_exp">Comece</string>
+    <string name="lbl_earphone_play">Apenas fones de ouvido</string>
+    <string name="tv_tip">click the above key image to unlock screen</string>
+    <string name="lbl_profile">Nenhum perfil</string>
+    <string name="lbl_link_to_wechat">link para WeChat</string>
+    <string name="lbl_share_to_wechat">Partilhar no WeChat</string>
+    <string name="lbl_profile_desc">*You can share the art work information to Facebook or WeChat</string>
+    <string name="lbl_share_ok">Compartilhar sucesso</string>
+    <string name="msg_dlg_download_confirm">Are you sure to download content for \"%s\", it may take few minutes?</string>
+    <string name="lbl_link_to_facebook">link para Facebook</string>
+    <string name="lbl_share_to_facebook">Partilhar no Facebook</string>
+    <string name="lbl_share">Partilhar</string>
+    <string name="langArtist">Artist’s Own Guidance</string>
+</resources>

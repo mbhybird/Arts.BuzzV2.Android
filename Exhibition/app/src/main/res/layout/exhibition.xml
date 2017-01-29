@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.buzz.layout.BidirSlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/exhibition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/right_menu"></include>
+
+        <RelativeLayout
+            android:layout_width="270dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="#00ccff"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="This is left menu"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+
+        <!--android:layout_width="270dip"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:background="#00ffcc"-->
+        <!--android:visibility="invisible" >-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:text="This is right menu"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="28sp" />-->
+        <!--</RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/ex_context"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/exhibition_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/li_height_200dp"
+                android:background="@drawable/macaudefault"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:padding="1dp">
+
+                    <com.buzz.fonts.FuturaTextView
+                        android:id="@+id/exhibition_title"
+                        android:layout_width="@dimen/li_height_300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ex_tx_margin_top"
+                        android:text=""
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/ex_tx_text_size"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.buzz.fonts.FuturaTextView
+                            android:id="@+id/exhibition_nav_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="@dimen/ex_tx_margin_top"
+                            android:text="《"
+                            android:textColor="@color/white_color"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:visibility="invisible"/>
+
+                        <com.buzz.fonts.FuturaTextView
+                            android:id="@+id/exhibition_nav_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/ex_tx_margin_top"
+                            android:text="》"
+                            android:textColor="@color/white_color"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:visibility="invisible"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/foot_bar"
+                android:layout_below="@+id/exhibition_background"
+                android:gravity="center_horizontal"
+                android:visibility="invisible">
+
+                <!--<ScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<com.buzz.fonts.MinionTextView-->
+                        <!--android:id="@+id/exhibition_desc"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="@dimen/padding_10dp"-->
+                        <!--android:ems="30"-->
+                        <!--android:lineSpacingExtra="2dp"-->
+                        <!--android:lineSpacingMultiplier="1.5"-->
+                        <!--android:text="@string/main_about"-->
+                        <!--android:textColor="@color/content_color"-->
+                        <!--android:textSize="@dimen/progressbar_height_18dp" />-->
+                <!--</ScrollView>-->
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/exhibition_desc"/>
+            </RelativeLayout>
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/foot_bar"
+                android:id="@+id/id_viewpager">
+            </android.support.v4.view.ViewPager>
+
+            <RelativeLayout
+                android:id="@+id/foot_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/re_width_70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingTop="@dimen/re_padding_5dp">
+
+                <ProgressBar
+                    android:id="@+id/exhibition_progress_bar"
+                    style="@style/tallerBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="0"
+                    android:max="100"
+                    android:progress="0"
+                    android:secondaryProgress="0" />
+
+
+                <ProgressBar
+                    android:id="@+id/exhibition_progress_bar_init"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <Button
+                    android:id="@+id/exhibition_btn_download"
+                    android:layout_width="@dimen/li_height_50dp"
+                    android:layout_height="@dimen/li_height_50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginBottom="@dimen/padding_10dp"
+                    android:background="@drawable/download"
+                    android:visibility="invisible" />
+                <Button
+                    android:id="@+id/exhibition_btn_preview"
+                    android:layout_width="@dimen/li_height_50dp"
+                    android:layout_height="@dimen/li_height_50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginBottom="@dimen/padding_10dp"
+                    android:background="@drawable/preview"
+                    android:visibility="invisible" />
+                <Button
+                    android:id="@+id/exhibition_btn_signal_go"
+                    android:layout_width="@dimen/li_height_50dp"
+                    android:layout_height="@dimen/li_height_50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/padding_10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ble_1"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/exhibition_btn_menu"
+                    android:layout_width="@dimen/li_height_50dp"
+                    android:layout_height="@dimen/li_height_50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/padding_10dp"
+                    android:layout_marginBottom="@dimen/padding_10dp"
+                    android:background="@drawable/menu" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.buzz.layout.BidirSlidingLayout>
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/activity_exhibition_vf">
+    </ViewFlipper>
+    <RelativeLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.buzz.activity.LockScreenActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lock_screen_activity_paint_layout"
+        android:visibility="invisible">
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lock_screen_activity_ball_layout"
+        android:layout_above="@+id/lock_screen_activity_key_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/li_height_50dp"
+            android:text=""
+            android:gravity="center"
+            android:textSize="@dimen/btn_text_size_25dp"
+            android:textColor="@color/white_color"
+            android:id="@+id/lock_screen_activity_txt_ex_title" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lock_screen_activity_txt_ex_title"
+            android:id="@+id/lock_screen_activity_beacon_list_lv"
+            android:scrollbars="vertical"
+            android:divider="@color/bg_color"
+            android:dividerHeight="@dimen/tx_margin_2dp">
+        </ListView>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/iv_locker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/lock"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/lock_screen_activity_key_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/de_tx_height_100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_key"
+            android:layout_width="@dimen/li_height_80dp"
+            android:layout_height="@dimen/li_height_80dp"
+            android:layout_marginBottom="@dimen/re_padding_5dp"
+            android:src="@drawable/key" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_tip"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+</RelativeLayout>

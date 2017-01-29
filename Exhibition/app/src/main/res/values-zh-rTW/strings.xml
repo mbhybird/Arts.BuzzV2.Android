@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="syncSystemConfig">同步系统设置</string>
+    <string name="downloadFile">资源文件下载</string>
+    <string name="download">下载</string>
+    <string name="cancel">取消</string>
+    <string name="doneList">下载历史：</string>
+    <string name="voicePlayLanguage">设置播放语言</string>
+    <string name="langSC">普通话</string>
+    <string name="langEN">English</string>
+    <string name="langCC">粤语</string>
+    <string name="langPT">Português</string>
+	
+	<string name="app_name">Arts.Buzz</string>
+    <string name="lb_title_appname">鳴</string>
+    <string name="lb_email">電郵</string>
+    <string name="lb_pwd">密碼</string>
+    <string name="lb_nname">名字</string>
+    <string name="btn_login">登入</string>
+    <string name="btn_sign">註冊</string>
+    <string name="btn_about">關於</string>
+    <string name="lb_setting">設置</string>
+    <string name="lb_events_list">事件清單</string>
+    <string name="description">“鳴“把藝術展品融入物聯綱的世界，令每個展品都有特有的聲音！</string>
+
+    <string name="lang_en">English</string>
+    <string name="lang_cn">简体中文</string>
+    <string name="lang_tw">繁體中文</string>
+    <string name="lang_pt">Português</string>
+    <string name="lb_item">實例</string>
+    <string name="main_about">“鳴”把藝術展品帶到物聯綱世界，為展品提供文字，圖象及語音資訊，它將作為你的個人導賞員。</string>
+
+    <string name="msg_check_wifi">WIFI沒有連接，請檢查!</string>
+    <string name="msg_check_bt">藍牙沒有連接，請檢查!</string>
+    <string name="msg_check_server">伺服器異常，請檢查!</string>
+    <string name="msg_restart">已更新的系統設置，重新開機該應用程式才能生效</string>
+    <string name="msg_voice_lang_cc">當前選擇為粵語播放</string>
+    <string name="msg_voice_lang_sc">當前選擇為國話播放</string>
+    <string name="msg_voice_lang_pt">當前選擇為葡語播放</string>
+    <string name="msg_voice_lang_en">當前選擇為英語播放</string>
+    <string name="msg_quit_system">再按一次退出程式</string>
+    <string name="msg_conn_headset">請連接耳機!</string>
+    <string name="msg_check_email">電郵必須填寫!</string>
+    <string name="msg_email_not_valid">電郵地址不合法</string>
+    <string name="msg_check_pwd">密碼必須填寫!</string>
+    <string name="msg_check_nickname">名字必須填寫!</string>
+    <string name="msg_login_failed">電郵或密碼不正確，請重新輸入！</string>
+    <string name="msg_dlg_title_tips">提示</string>
+    <string name="msg_login_success">確定</string>
+    <string name="msg_dlg_ok">確定</string>
+    <string name="msg_dlg_title_ex_tag">展品資訊</string>
+    <string name="msg_dlg_cancel">取消</string>
+    <string name="msg_email_exists">該電郵已注册，請輸入另外一個</string>
+
+    <string name="lbl_setting_auto_play">自動播放</string>
+
+    <string name="msg_catalog_loading">目錄載入中...</string>
+    <string name="msg_catalog_finished">目錄載入完成</string>
+    <string name="msg_add_to_favorite_success">收藏成功</string>
+    <string name="msg_file_downloading">檔案下載中...</string>
+    <string name="msg_delete_all_files">你確認刪除所有的檔案?</string>
+    <string name="spinner_prompt">請選擇</string>
+    <string name="msg_sign_up_success">註冊成功</string>
+    <string name="lbl_system_display_lang">顯示語言</string>
+    <string name="lbl_system_voice_lang">播放語言</string>
+    <string name="msg_app_initializing">數據加載中...</string>
+    <string name="msg_delete_favorite">你確認刪除該收藏嗎?</string>
+
+    <string name="msg_logging_in">登錄中</string>
+    <string name="msg_found_new_app_version">發現有更新版本，要升級嗎？</string>
+    <string name="lbl_downloads">展覽下載</string>
+    <string name="lbl_my_collections">展品收藏</string>
+    <string name="msg_file_not_exists">文件不存在</string>
+    <string name="btn_title_start_to_exp">開始體驗</string>
+    <string name="lbl_earphone_play">只限耳機播放</string>
+    <string name="tv_tip">click the above key image to unlock screen</string>
+    <string name="lbl_profile">個人資料</string>
+    <string name="lbl_link_to_wechat">連接到微信</string>
+    <string name="lbl_share_to_wechat">分享到微信</string>
+    <string name="lbl_profile_desc">連接後可分享畫作到微信或臉書</string>
+    <string name="lbl_share_ok">分享成功</string>
+    <string name="msg_dlg_download_confirm">是否確定下載\"%s\"內容, 可能需時數分鐘？</string>
+    <string name="lbl_link_to_facebook">連接到臉譜</string>
+    <string name="lbl_share_to_facebook">分享到臉書</string>
+    <string name="lbl_share">分享</string>
+    <string name="langArtist">藝術家親自導賞</string>
+</resources>

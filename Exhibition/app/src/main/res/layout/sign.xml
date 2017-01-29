@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/li_height_180dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10dp">
+
+        <com.buzz.fonts.FuturaTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height_40dp"
+            android:text="@string/lb_title_appname"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_text_size_35dp"
+            android:textStyle="bold" />
+        <!--<ImageView-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:src="@drawable/macauarts"-->
+        <!--/>-->
+        <com.buzz.fonts.FuturaTextView
+            android:paddingTop="@dimen/tx_margin_2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/gray_color"
+            android:textSize="@dimen/dig_tx_size_20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white_color"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/li_height_290dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/li_margin_top"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10dp">
+
+        <com.buzz.fonts.FuturaTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tx_height_23dp"
+            android:layout_marginBottom="@dimen/tx_margin_2dp"
+            android:text="@string/lb_nname"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/tx_text_size_20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sign_activity_et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ed_height_40dp"
+            android:background="@drawable/bg_edit_text"
+            android:imeOptions="actionNext"
+            android:singleLine="true" />
+
+
+        <com.buzz.fonts.FuturaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tx_height_23dp"
+            android:layout_marginTop="@dimen/tx_margin_2dp"
+            android:text="@string/lb_email"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/tx_text_size_20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sign_activity_et_email"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/ed_height_40dp"
+            android:layout_marginTop="@dimen/ed_margin_top_2dp"
+            android:background="@drawable/bg_edit_text"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+
+            />
+
+        <com.buzz.fonts.FuturaTextView
+            android:id="@+id/s_tx_email"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tx_height_23dp"
+            android:layout_marginBottom="@dimen/tx_margin_2dp"
+            android:text="@string/lb_pwd"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/tx_text_size_20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sign_activity_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ed_height_40dp"
+            android:background="@drawable/bg_edit_text"
+            android:imeOptions="actionDone"
+            android:inputType="textVisiblePassword"
+            android:singleLine="true"
+            android:password="false" />
+
+        <com.buzz.fonts.FuturaButton
+            android:id="@+id/sign_activity_btn_sign"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_height_45dp"
+            android:layout_marginTop="@dimen/btn_margin_top_20dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+
+            android:text="@string/btn_sign"
+            android:textColor="@color/red_color"
+            android:textSize="@dimen/btn_text_size_25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/li_height_80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.buzz.fonts.FuturaButton
+                android:id="@+id/sign_activity_btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_45dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:text="@string/btn_login"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/btn_text_size_25dp" />
+
+            <!--<com.buzz.fonts.FuturaButton-->
+                <!--android:layout_width="@dimen/btn_width_160dp"-->
+                <!--android:layout_height="@dimen/btn_height_45dp"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:background="@drawable/button_pressed"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/btn_about"-->
+                <!--android:textColor="@color/white_color"-->
+                <!--android:textSize="@dimen/btn_text_size_25dp" />-->
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

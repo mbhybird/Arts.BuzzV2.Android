@@ -1,0 +1,1 @@
+include ':app', ':jackson-all-1.7.6', ':estimote-sdk-preview', ':estimote-sdk-preview-javadoc', ':nineoldandroids-2.4.0', ':android-beacon-library-2.3.3', ':gradle-retrolambda-3.2.1', ':libammsdk', ':okio-1.6.0', ':okhttp-2.7.0'

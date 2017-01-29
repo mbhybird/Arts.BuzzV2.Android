@@ -1,0 +1,191 @@
+<com.buzz.layout.BidirSlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/works_context"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="270dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#00ccff"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="This is left menu"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/right_menu"></include>
+
+    <RelativeLayout
+        android:id="@+id/wk_context"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@color/about_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/dlg_imgView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/li_height_200dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/img02"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#50282828"
+                android:padding="@dimen/padding">
+
+                <com.buzz.fonts.FuturaTextView
+                    android:id="@+id/dlg_txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dialog_title_height"
+                    android:layout_alignEnd="@+id/dlg_txt_artist"
+                    android:layout_alignParentTop="true"
+                    android:text="Impression,sunrise"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/dialog_title_text_size"
+                    android:textStyle="bold" />
+
+                <com.buzz.fonts.FuturaTextView
+                    android:id="@+id/dlg_txt_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dialog_author_year_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/dlg_txt_title"
+                    android:text="Claude Monet"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/progressbar_height_18dp" />
+
+                <Button
+                    android:id="@+id/dlg_btn_menu"
+                    android:layout_width="@dimen/menu_width"
+                    android:layout_height="@dimen/menu_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/icon_menu"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding">
+
+                <com.buzz.fonts.FuturaTextView
+                    android:id="@+id/dlg_txt_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dialog_title_height"
+                    android:layout_alignEnd="@+id/dlg_txt_artist"
+                    android:layout_alignParentTop="true"
+                    android:text="Impression,sunrise"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/dialog_title_text_size"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/wk_bottom"
+            android:layout_below="@+id/dlg_imgView">
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dialog_webview"></WebView>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarStyle="outsideOverlay"
+                android:visibility="gone">
+
+                <com.buzz.fonts.MinionTextView
+                    android:id="@+id/dlg_txt_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding"
+                    android:ems="100"
+                    android:lineSpacingExtra="1dp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text=""
+                    android:textColor="@color/content_color"
+                    android:textSize="@dimen/content_text_size" />
+
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wk_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/li_height_80dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/footer_bg_color"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/padding">
+
+                <ImageButton
+                    android:id="@+id/dlg_btnBack"
+                    android:layout_width="@dimen/dialog_btn_width"
+                    android:layout_height="@dimen/dialog_btn_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/dlg_audio_btn"
+                    android:background="@null"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/back" />
+
+                <Button
+                    android:id="@+id/dlg_share_btn"
+                    android:layout_width="@dimen/title_text_size_35dp"
+                    android:layout_height="@dimen/dialog_btn_height"
+                    android:layout_alignTop="@+id/dlg_favorite_btn"
+                    android:layout_marginEnd="@dimen/dialog_btn_marginEnd"
+                    android:layout_toStartOf="@+id/dlg_audio_play_pause"
+                    android:background="@drawable/share" />
+
+                <Button
+                    android:id="@+id/dlg_audio_play_pause"
+                    android:layout_width="@dimen/dialog_btn_width"
+                    android:layout_height="@dimen/dialog_btn_height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignTop="@+id/dlg_favorite_btn"
+                    android:layout_toStartOf="@+id/dlg_audio_btn"
+                    android:layout_marginEnd="@dimen/dialog_btn_marginEnd"
+                    android:background="@drawable/play_pause" />
+
+                <Button
+                    android:id="@+id/dlg_audio_btn"
+                    android:layout_width="@dimen/dialog_btn_width"
+                    android:layout_height="@dimen/dialog_btn_height"
+                    android:layout_alignTop="@+id/dlg_favorite_btn"
+                    android:layout_toStartOf="@+id/dlg_favorite_btn"
+                    android:layout_marginEnd="@dimen/dialog_btn_marginEnd"
+                    android:background="@drawable/replay" />
+
+
+                <Button
+                    android:id="@+id/dlg_favorite_btn"
+                    android:layout_width="@dimen/dialog_btn_width"
+                    android:layout_height="@dimen/dialog_btn_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/favorite" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.buzz.layout.BidirSlidingLayout>

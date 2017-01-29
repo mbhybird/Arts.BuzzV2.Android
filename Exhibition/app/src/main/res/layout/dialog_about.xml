@@ -1,0 +1,126 @@
+<com.buzz.layout.BidirSlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exhibition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="270dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#00ccff"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="This is left menu"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+
+    <!--android:layout_width="270dip"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:background="#00ffcc"-->
+    <!--android:visibility="invisible" >-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="This is right menu"-->
+    <!--android:textColor="#000000"-->
+    <!--android:textSize="28sp" />-->
+    <!--</RelativeLayout>-->
+    <include layout="@layout/right_menu"></include>
+
+    <RelativeLayout
+        android:id="@+id/ex_context"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/exhibition_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/li_height_200dp"
+            android:background="@drawable/macaudefault"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#50282828"
+                android:padding="@dimen/padding">
+                <ImageButton
+                    android:id="@+id/dlg_btnBack"
+                    android:layout_width="@dimen/radio_btn_width_70dp"
+                    android:layout_height="@dimen/img_btn_height"
+                    android:layout_alignParentLeft="true"
+                    android:background="@null"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/icon_back" />
+                <com.buzz.fonts.FuturaTextView
+                    android:id="@+id/exhibition_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/ex_tx_height"
+                    android:text="@string/btn_about"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/tx_text_size_30dp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/dlg_btnBack" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/foot_bar"
+            android:layout_below="@+id/exhibition_background"
+            android:gravity="center_horizontal">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.buzz.fonts.MinionTextView
+                    android:id="@+id/exhibition_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_10dp"
+                    android:ems="30"
+                    android:lineSpacingExtra="2dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="@string/main_about"
+                    android:textColor="@color/content_color"
+                    android:textSize="@dimen/content_text_size" />
+            </ScrollView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/foot_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/re_height_60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingTop="@dimen/re_padding_5dp">
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.buzz.layout.BidirSlidingLayout>

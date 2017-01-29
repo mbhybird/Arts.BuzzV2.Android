@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/li_height_120dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding"
+        android:id="@+id/linearLayout">
+        <RelativeLayout
+            android:layout_width="@dimen/re_width_70dp"
+            android:layout_height="@dimen/re_height_50dp"
+            >
+            <ImageButton
+                android:layout_marginTop="@dimen/ed_margin_top_2dp"
+                android:layout_width="@dimen/img_btn_width"
+                android:layout_height="@dimen/img_btn_height"
+                android:background="@drawable/icon_back"
+
+                android:textColor="@color/white_color"
+                android:layout_alignParentLeft="true"
+                />
+
+        </RelativeLayout>
+        <com.buzz.fonts.FuturaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ex_tx_height"
+            android:text="@string/lb_events_list"
+            android:textSize="@dimen/ex_tx_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/white_color"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding"
+        android:background="@drawable/list_item_bg"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true">
+        <com.buzz.layout.ListViewCompat
+
+            android:id="@+id/event_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#698686"
+            android:cacheColorHint="#00000000"
+            android:divider="#dddbdb"
+            android:dividerHeight="1.0px"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</RelativeLayout>

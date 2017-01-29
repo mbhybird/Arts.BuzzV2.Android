@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item android:id="@+id/action_syncSysCfg" android:title="@string/syncSystemConfig"
+        android:orderInCategory="100" app:showAsAction="never"/>
+    <item android:id="@+id/action_downloadFile" android:title="@string/downloadFile"
+        android:orderInCategory="200" app:showAsAction="never"/>
+    <item android:id="@+id/action_voicePlayLang" android:title="@string/voicePlayLanguage"
+        android:orderInCategory="300" app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/action_langSC"
+                android:icon="@android:drawable/ic_btn_speak_now"
+                android:title="@string/langSC"
+                />
+            <item android:id="@+id/action_langCC"
+                android:icon="@android:drawable/ic_btn_speak_now"
+                android:title="@string/langCC"
+                />
+            <item android:id="@+id/action_langEN"
+                android:icon="@android:drawable/ic_btn_speak_now"
+                android:title="@string/langEN"
+                />
+            <item android:id="@+id/action_langPT"
+                android:icon="@android:drawable/ic_btn_speak_now"
+                android:title="@string/langPT"
+                />
+        </menu>
+    </item>
+</menu>

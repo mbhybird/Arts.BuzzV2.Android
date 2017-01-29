@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:maxWidth="@dimen/dig_max_width_180dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dig_li_height_200dp"
+        android:background="#EBEEDD"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/footer_bg_color"
+            android:minHeight="@dimen/re_height_40dp">
+
+            <TextView
+                android:id="@+id/progress_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="Tips"
+                android:textColor="#FFFFFf"
+                android:textSize="@dimen/dig_tx_size_20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/progress_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dig_tx_margin_rigth_23dp"
+            android:layout_marginTop="@dimen/dig_tx_margin_top_52dp"
+            android:text="download"
+            android:textColor="#282828"
+            android:textSize="@dimen/dig_tx" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progressbar_height_18dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/pro_margin_left_15dp"
+            android:layout_marginRight="@dimen/pro_margin_left_15dp"
+            android:layout_marginTop="@dimen/btn_margin_top_20dp"
+            android:progressDrawable="@drawable/download_bar"
+            android:secondaryProgress="100" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pro_margin_left_15dp"
+            android:layout_marginRight="@dimen/pro_margin_left_15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/progress_percent"
+                    android:layout_width="@dimen/li_height_80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dig_tx_margin_top_5dp"
+                    android:textColor="#282828"
+                    android:textSize="@dimen/dig_tx_size_15dp" />
+
+                <TextView
+                    android:id="@+id/progress_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/dig_tx_margin_top_5dp"
+                    android:textColor="#282828"
+                    android:textSize="@dimen/dig_tx_size_15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

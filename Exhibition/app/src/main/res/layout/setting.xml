@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/about_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/li_height_160dp"
+        android:background="@color/bg_color"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/setting_activity_btn_back"
+                android:layout_width="@dimen/re_width_70dp"
+                android:layout_height="@dimen/ed_height_40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/li_margin_top_5dp"
+                android:background="@null"
+                android:scaleType="fitStart"
+                android:src="@drawable/icon_back" />
+
+        </RelativeLayout>
+
+        <com.buzz.fonts.FuturaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ex_tx_height"
+            android:text="@string/lb_setting"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/ex_tx_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/re_height_60dp"
+            android:padding="@dimen/re_padding_5dp">
+
+            <com.buzz.fonts.FuturaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/set_tx_height_50dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="@string/lbl_setting_auto_play"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/set_tx_size_23dp" />
+
+            <RadioButton
+                android:id="@+id/setting_activity_rbtn_auto_play"
+                android:layout_width="@dimen/radio_btn_width_70dp"
+                android:layout_height="@dimen/radio_btn_height_40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/radio"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/re_height_60dp"
+            android:padding="@dimen/re_padding_5dp">
+
+            <com.buzz.fonts.FuturaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/set_tx_height_50dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="@string/lbl_earphone_play"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/set_tx_size_23dp" />
+
+            <RadioButton
+                android:id="@+id/setting_activity_rbtn_earphone_play"
+                android:layout_width="@dimen/radio_btn_width_70dp"
+                android:layout_height="@dimen/radio_btn_height_40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/radio"
+                android:button="@null" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/re_height_60dp"
+            android:padding="@dimen/re_padding_5dp">
+
+            <com.buzz.fonts.FuturaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/set_lang_height_60dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="@string/lbl_system_display_lang"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/set_tx_size_23dp" />
+        </RelativeLayout>
+
+        <Spinner
+            android:id="@+id/setting_activity_spin_display_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/spinner_prompt"
+            android:spinnerMode="dialog" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/re_height_60dp"
+            android:padding="@dimen/re_padding_5dp">
+
+            <com.buzz.fonts.FuturaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/set_lang_height_60dp"
+                android:gravity="center"
+                android:text="@string/lbl_system_voice_lang"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/set_tx_size_23dp" />
+        </RelativeLayout>
+
+        <Spinner
+
+            android:id="@+id/setting_activity_spin_voice_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/spinner_prompt"
+            android:spinnerMode="dialog" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_color" />
+    </LinearLayout>
+
+</RelativeLayout>

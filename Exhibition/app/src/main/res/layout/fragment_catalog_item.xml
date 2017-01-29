@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.buzz.fragment.CatalogItemFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nonVideoLayout">
+        <RelativeLayout
+            android:id="@+id/catalog_fragment_exhibition_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/li_height_200dp"
+            android:background="@drawable/macaudefault"
+            android:orientation="vertical">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/catalog_fragment_exhibition_background"
+            android:gravity="center_horizontal">
+            <com.buzz.impl.VideoEnabledWebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/catalog_fragment_exhibition_desc"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('gradle-retrolambda-3.2.1.jar'))

@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/re_height_60dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/right_menu_list_item_imgView"
+                    android:layout_width="@dimen/tx_text_size_25dp"
+                    android:layout_height="@dimen/tx_text_size_25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dig_tx_size_20dp"
+                    android:background="@drawable/love"
+                />
+
+                <com.buzz.fonts.FuturaTextView
+                    android:id="@+id/right_menu_list_item_txtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/right_menu_list_item_imgView"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/tx_margin_start_57dp"
+                    android:text="Item"
+                    android:textColor="@color/gray_color"
+                    android:textSize="@dimen/dig_tx_text_size_17dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

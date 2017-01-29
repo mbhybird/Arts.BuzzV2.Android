@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/right_menu"
+    android:layout_width="260dip"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:background="#638181"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/Bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/li_height_80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding">
+
+
+            <Button
+                android:id="@+id/right_menu_btn_favor"
+                android:layout_width="@dimen/dialog_btn_width"
+                android:layout_height="@dimen/dialog_btn_height"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/favorite" />
+
+            <Button
+                android:id="@+id/right_menu_btn_profile"
+                android:layout_width="@dimen/dialog_btn_width"
+                android:layout_height="@dimen/dialog_btn_height"
+                android:layout_alignTop="@+id/right_menu_btn_favor"
+                android:layout_marginStart="@dimen/dialog_btn_marginEnd"
+                android:layout_toEndOf="@+id/right_menu_btn_favor"
+                android:background="@drawable/profile" />
+
+            <Button
+                android:id="@+id/right_menu_btn_download"
+                android:layout_width="@dimen/dialog_btn_width"
+                android:layout_height="@dimen/dialog_btn_height"
+                android:layout_alignTop="@+id/right_menu_btn_favor"
+                android:layout_marginStart="@dimen/dialog_btn_marginEnd"
+                android:layout_toEndOf="@+id/right_menu_btn_profile"
+                android:background="@drawable/download" />
+
+            <Button
+                android:id="@+id/right_menu_btn_setting"
+                android:layout_width="@dimen/dialog_btn_width"
+                android:layout_height="@dimen/dialog_btn_height"
+                android:layout_alignTop="@+id/right_menu_btn_favor"
+                android:layout_marginStart="@dimen/dialog_btn_marginEnd"
+                android:layout_toEndOf="@+id/right_menu_btn_download"
+                android:background="@drawable/setting" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/li_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/re_width_70dp"
+        android:padding="@dimen/padding"
+        >
+        <com.buzz.fonts.FuturaTextView
+            android:id="@+id/right_menu_header_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/tx_height_23dp"
+            android:text="My Collections"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/li_top"
+        android:layout_above="@+id/Bottom">
+        <ListView
+            android:id="@+id/right_menu_lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/padding_10dp"
+            android:scrollbars="none" />
+    </RelativeLayout>
+</RelativeLayout>

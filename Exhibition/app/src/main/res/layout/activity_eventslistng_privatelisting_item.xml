@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/re_height_60dp"
+
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/re_padding_5dp"
+    android:paddingLeft="@dimen/padding_10dp"
+    android:paddingRight="@dimen/padding_10dp"
+    android:paddingTop="@dimen/re_padding_5dp" >
+
+    <!--<ImageView-->
+        <!--android:id="@+id/icon"-->
+        <!--android:layout_width="25dp"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:src="@drawable/icon_blue" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@id/icon"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="15sp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/msg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@id/icon"-->
+        <!--android:layout_alignLeft="@id/title"-->
+        <!--android:text="ddddd"-->
+        <!--android:textColor="@color/grey" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/time"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignTop="@id/title"-->
+        <!--android:textColor="@color/grey" />-->
+    <com.buzz.fonts.FuturaTextView
+        android:id="@+id/event_list_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/tx_text_size_30dp"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:id="@+id/event_list_icon"
+        android:layout_width="@dimen/img_view_width_25dp"
+        android:layout_height="@dimen/img_view_height_25dp"
+        android:src="@drawable/icon_blue_normal"
+        android:layout_marginTop="@dimen/img_view_margin_top_6dp"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>
