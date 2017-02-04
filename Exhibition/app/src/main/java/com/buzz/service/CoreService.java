@@ -51,8 +51,8 @@ public class CoreService extends Service implements BeaconConsumer {
 
         beaconManager = BeaconManager.getInstanceForApplication(this);
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout(IBEACON_FORMAT));
-        beaconManager.setForegroundScanPeriod(3000);
-        beaconManager.setBackgroundScanPeriod(3000);
+        beaconManager.setForegroundScanPeriod(500);
+        beaconManager.setBackgroundScanPeriod(500);
         beaconManager.bind(this);
     }
 
