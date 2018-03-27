@@ -41,8 +41,8 @@ android {
         applicationId "com.buzz.exhibition"
         minSdkVersion 18
         targetSdkVersion 21
-        versionCode 247
-        versionName "2.4.7"
+        versionCode 248
+        versionName "2.4.8"
     }
     buildTypes {
         release {
@@ -88,5 +88,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:cardview-v7:21.0.3'
     compile 'com.android.support:support-v4:21.0.3'
+    compile group: 'net.lingala.zip4j', name: 'zip4j', version: '1.3.2'
 }
 

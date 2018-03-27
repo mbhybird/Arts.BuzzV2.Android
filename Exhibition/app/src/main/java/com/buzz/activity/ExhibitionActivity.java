@@ -25,7 +25,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
+
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
@@ -90,6 +90,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import net.lingala.zip4j.core.ZipFile;
+import net.lingala.zip4j.exception.ZipException;
 
 /**
  * Created by buzz on 2015/5/5.
@@ -1289,10 +1291,11 @@ public class ExhibitionActivity extends FragmentActivity implements CatalogItemF
     private void downloadExFiles(download down, String dlgTitle) {
         taskList.clear();
         fileCounter = 0;
-        String[] suffix = new String[]{"_cc.mp3", "_en.mp3", "_sc.mp3", "_pt.mp3"};
+        //String[] suffix = new String[]{"_cc.mp3", "_en.mp3", "_sc.mp3", "_pt.mp3"};
 
         //保存配置文件并重新初始化
         down.saveToConfigThenReInit();
+        /*
         String extraImages = down.getDextag().getWebsite();
 
         for (content c : down.getContentList()) {
@@ -1333,13 +1336,15 @@ public class ExhibitionActivity extends FragmentActivity implements CatalogItemF
                     }
                 }
             }
-        }
+        }*/
+        taskList.put("http://arts.things.buzz/download/package/" + down.getDextag().getExtag() + ".zip"
+                , new MyTask("/com.buzz.exhibition/", down.getDextag().getExtag() + ".zip"));
 
         if (taskList.size() > 0) {
             mProgressDialog.setTitle(dlgTitle);
             mProgressDialog.setProgress(0);
             mProgressDialog.incrementProgressBy(1);
-            mProgressDialog.setMax(taskList.size());
+            mProgressDialog.setMax(100);
             mProgressDialog.show();
         }
         //只需下载配置
@@ -1621,6 +1626,7 @@ public class ExhibitionActivity extends FragmentActivity implements CatalogItemF
         protected void onProgressUpdate(Integer... progresses) {
             //Log.i(TAG, "onProgressUpdate(Progress... progresses) called");
             if (lvMode.equals("d")) {
+                mProgressDialog.setProgress(progresses[0]);
             } else {
                 progressBar.setProgress(progresses[0]);
             }
@@ -1632,13 +1638,24 @@ public class ExhibitionActivity extends FragmentActivity implements CatalogItemF
         protected void onPostExecute(String result) {
             fileCounter++;
             if (lvMode.equals("d")) {
-                mProgressDialog.setProgress(fileCounter);
+                //mProgressDialog.setProgress(fileCounter);
             } else {
                 progressBar.setSecondaryProgress((int) ((fileCounter * 1.0 / taskList.size()) * 100));
             }
 
             if (fileCounter == taskList.size()) {
                 if (lvMode.equals("d")) {
+                    try {
+                        File sourceZipFile = new File(GlobalConst.PATH_SDCARD + this.clientPath + this.fileName);
+                        if (sourceZipFile.exists()) {
+                            ZipFile zipFile = new ZipFile(sourceZipFile);
+                            String destPath = sourceZipFile.getPath().replace(".zip", "/");
+                            zipFile.extractAll(destPath);
+                            sourceZipFile.delete();
+                        }
+                    } catch (ZipException e) {
+                        e.printStackTrace();
+                    }
                     //关闭下载对话框
                     mProgressDialog.setProgress(0);
                     mProgressDialog.dismiss();

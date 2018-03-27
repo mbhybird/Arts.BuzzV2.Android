@@ -84,6 +84,9 @@ import com.facebook.share.Sharer;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
 
+import net.lingala.zip4j.core.ZipFile;
+import net.lingala.zip4j.exception.ZipException;
+
 public class MainActivity extends Activity {
 
     final String TAG = this.getClass().getSimpleName();
@@ -1130,6 +1133,7 @@ public class MainActivity extends Activity {
 
         //保存配置文件并重新初始化
         down.saveToConfigThenReInit();
+        /*
         String extraImages = down.getDextag().getWebsite();
 
         String[] suffix = new String[]{"_cc.mp3", "_en.mp3", "_sc.mp3", "_pt.mp3"};
@@ -1171,13 +1175,15 @@ public class MainActivity extends Activity {
                     }
                 }
             }
-        }
+        }*/
+        taskList.put("http://arts.things.buzz/download/package/" + down.getDextag().getExtag() + ".zip"
+                , new MyTask("/com.buzz.exhibition/", down.getDextag().getExtag() + ".zip"));
 
         if (taskList.size() > 0) {
             mProgressDialog.setTitle(dlgTitle);
             mProgressDialog.setProgress(0);
             mProgressDialog.incrementProgressBy(1);
-            mProgressDialog.setMax(taskList.size());
+            mProgressDialog.setMax(100);
             mProgressDialog.show();
         }
         //只需下载配置
@@ -1744,15 +1750,27 @@ public class MainActivity extends Activity {
         @Override
         protected void onProgressUpdate(Integer... progresses) {
             //Log.i(TAG, "onProgressUpdate(Progress... progresses) called");
+            mProgressDialog.setProgress(progresses[0]);
         }
 
         //onPostExecute方法用于在执行完后台任务后更新UI,显示结果
         @Override
         protected void onPostExecute(String result) {
             fileCounter++;
-            mProgressDialog.setProgress(fileCounter);
+            //mProgressDialog.setProgress(fileCounter);
 
             if (fileCounter == taskList.size()) {
+                try {
+                    File sourceZipFile = new File(GlobalConst.PATH_SDCARD + this.clientPath + this.fileName);
+                    if (sourceZipFile.exists()) {
+                        ZipFile zipFile = new ZipFile(sourceZipFile);
+                        String destPath = sourceZipFile.getPath().replace(".zip", "/");
+                        zipFile.extractAll(destPath);
+                        sourceZipFile.delete();
+                    }
+                } catch (ZipException e) {
+                    e.printStackTrace();
+                }
                 //关闭下载对话框
                 mProgressDialog.setProgress(0);
                 mProgressDialog.dismiss();
